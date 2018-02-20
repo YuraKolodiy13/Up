@@ -1,0 +1,79 @@
+.slider-wrapper{
+  position: relative;
+}
+.mySlides{
+  position: relative;
+}
+.mySlides img{
+  height: auto;
+  max-width: 100%;
+}
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 300px;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  text-decoration: none;
+}
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover{
+  background-color: rgba(0,0,0, .8);
+}
+.text{
+  color: #f2f2f2;;
+  padding: 8px 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.text h1{
+  font-size: 64px;
+  text-transform: uppercase;
+}
+.text h1 span{
+  color: #fff200;
+}
+.text p{
+  font-size: 16px;
+  line-height: 30px;
+  width: 750px;
+  margin: auto;
+}
+.dot{
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background-color: #717171;
+}
+.fade{
+  animation: fade 1.5s;
+}
+@keyframes fade {
+  from{
+    opacity: .4;
+  }
+  to{
+    opacity: 1;
+  }
+}
