@@ -1,3 +1,4 @@
+@import "variables";
 .nav{
   display: flex;
   max-width: 1140px;
@@ -11,27 +12,26 @@
 
 .mainNav{
   width: 457px;
-  padding: 0 15px;
+  //padding: 0 15px;
   display: flex;
   justify-content: space-around;
   margin: 0;
   list-style: none;
 }
-.mainNav > li:last-child{
+.mainNav li.icon{
   display: none;
 }
 .mainNav ul{
   display: none;
   position: absolute;
   z-index: 100;
-  top: 70px;
-  width: 120px;
+  top: 68px;
   background-color: #000;
   background-color: rgba(0, 0, 0 , .65);
-  padding: 25px 30px;
   margin: 0;
+  padding: 10px 0;
   list-style: none;
-  border-top: 2px solid #fff200;
+  border-top: 2px solid @color-yellow;
 }
 .mainNav ul ul{
   left: 180px;
@@ -40,7 +40,7 @@
   display: block;
 }
 .mainNav li {
-  padding: 25px 0;
+  padding: 0;
 }
 
 .nav input{
@@ -49,4 +49,121 @@
   margin: 20px 0 15px;
   background-color: #e8e4f1;
   border: none;
+}
+.mainNav a{
+  text-decoration: none;
+  display: inline-block;
+  color: @color-black;
+  font-weight: normal;
+  padding: 22px;
+}
+.mainNav a:hover{
+  color: @color-black;
+  font-weight: bold;
+}
+.mainNav__inner a{
+  width: 180px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: lighter;
+  padding: 10px 20px 10px 40px;
+  display: block;
+  position: relative;
+  letter-spacing: 0.075em;
+}
+.mainNav__inner a:hover{
+  color: @color-yellow;
+  font-weight: lighter;
+}
+.mainNav__inner a::before{
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%) rotate(45deg);
+}
+.mainNav__inner a:hover::after{
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid @color-yellow;
+  border-top: 2px solid @color-yellow;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%) rotate(45deg);
+}
+.mainNav__inner a:hover::before{
+  border-color: @color-yellow;
+}
+
+.search{
+  position: relative;
+}
+.search label{
+  background: url("../img/sprite.png") no-repeat;
+  background-position: 3px -86px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 36px;
+  height: 28px;
+}
+.search input:focus label{
+  opacity: 0;
+}
+
+@media (min-width: 320px) and (max-width: 1200px){
+  .mainNav li:not(:last-child),
+  .search{
+    display: none;
+  }
+  .mainNav{
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+  }
+  .nav .mainNav li.icon{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0;
+  }
+  .nav.responsive li.icon{
+    display: block;
+  }
+  .nav li.icon a{
+    color: @color-black;
+    font-size: 20px;
+    padding: 0;
+  }
+  .nav.responsive{
+    position: relative;
+    display: block;
+    overflow-x: hidden;
+  }
+  .nav.responsive li,
+  .nav.responsive .search{
+    display: block;
+    text-align: center;
+  }
+  .nav.responsive a{
+    display: block;
+  }
+  .nav__logo{
+    width: auto;
+    text-align: center;
+    margin-left: 10px;
+  }
 }

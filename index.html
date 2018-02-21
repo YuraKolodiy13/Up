@@ -2,7 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +16,7 @@
             <ul class="mainNav">
                 <li><a href="">Home</a></li>
                 <li><a href="">Products</a>
-                    <ul>
+                    <ul class="mainNav__inner">
                         <li><a href="">Name Surname</a>
                             <ul>
                                 <li><a href="">Name Surname</a></li>
@@ -55,10 +57,12 @@
                 </li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
-                <li><a class="icon" href="javascript:void(0)" style="font-size: 15px">☰</a></li>
+                <li class="icon"><a href="javascript:void(0)">☰</a></li>
             </ul>
-            <input type="search" id="search">
-            <label for="search"></label>
+            <div class="search">
+                <input type="search" id="search">
+                <label for="search"></label>
+            </div>
         </nav>
 
         <div class="slider">
@@ -76,33 +80,126 @@
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="http://rjee.ru/wp-content/uploads/2017/06/rjee-2-2-2017-4-img-06.jpg" alt="" style="width: 100%;">
-                    <div class="text">text</div>
+                    <img src="img/slider-img2.jpg" alt="slide2">
+                    <div class="text">
+                        <h1>Website <span>Design for Photographers</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aliquid beatae dicta dolorum ea enim est et ex facere fuga itaque laboriosam maxime molestiae, nisi nulla odio officiis praesentium quae quam quidem tempora velit veniam veritatis voluptate. Ullam, vero.</p>
+                    </div>
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="http://rjee.ru/wp-content/uploads/2016/09/rjee-1-3-2016-3-img-02.jpg" alt="" style="width: 100%;">
-                    <div class="text">text</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfpKGenes9Chl7T0drx8kWx6mra2u0ARThfBghSz30OU8MknrX" alt="" style="width: 100%;">
-                    <div class="text">text</div>
+                    <img src="img/slider-img3.jpg" alt="slide3">
+                    <div class="text">
+                        <h1>Get <span>Social</span></h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque culpa cum distinctio, dolorem eaque error et eum excepturi expedita id illo laudantium minima minus molestias, mollitia nobis non optio quaerat quasi sit ut voluptas. Alias amet cumque dignissimos earum, est hic molestias nihil repellat sed vitae. Minima nihil, voluptatem.</p>
+                    </div>
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094</a>
                 <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
             </div>
 
 
-            <div style="text-align: center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-            </div>
         </div>
     </header>
+
+    <main>
+        <div class="choose container">
+            <div class="choose__title">
+                <h2>Why <span>Choose Us</span></h2>
+                <p>Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis.
+                    Nullam at scelerisque tellus mattis volutpat rhoncus, </p>
+            </div>
+            <div class="choose__items">
+                <div class="choose__item item">
+                    <div class="item__img">
+                        <img src="img/choose1.png" alt="">
+                    </div>
+                    <div class="item__title">
+                        <h2>your title</h2>
+                        <p>Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </p>
+                    <div class="overlay">
+                        <h3>see more</h3>
+                        <div class="overlay__btns">
+                            <button class="btn config"></button>
+                            <button class="btn zoom"></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="choose__item item">
+                    <div class="item__img">
+                        <img src="img/choose2.png" alt="">
+                    </div>
+                    <div class="item__title">
+                        <h2>your title</h2>
+                        <p>Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </p>
+                    <div class="overlay">
+                        <h3>see more</h3>
+                        <div class="overlay__btns">
+                            <button class="btn config"></button>
+                            <button class="btn zoom"></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="choose__item item">
+                    <div class="item__img">
+                        <img src="img/choose3.png" alt="">
+                    </div>
+                    <div class="item__title">
+                        <h2>your title</h2>
+                        <p>Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </p>
+                    <div class="overlay">
+                        <h3>see more</h3>
+                        <div class="overlay__btns">
+                            <button class="btn config"></button>
+                            <button class="btn zoom"></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="choose__item item">
+                    <div class="item__img">
+                        <img src="img/choose4.png" alt="">
+                    </div>
+                    <div class="item__title">
+                        <h2>your title</h2>
+                        <p>Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </p>
+                    <div class="overlay">
+                        <h3>see more</h3>
+                        <div class="overlay__btns">
+                            <button class="btn config"></button>
+                            <button class="btn zoom"></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="choose__item item">
+                    <div class="item__img">
+                        <img src="img/choose5.png" alt="">
+                    </div>
+                    <div class="item__title">
+                        <h2>your title</h2>
+                        <p>Duis bibendum diam non erat facilaisis en ter tincidunt. Duis </p>
+                    <div class="overlay">
+                        <h3>see more</h3>
+                        <div class="overlay__btns">
+                            <button class="btn config"></button>
+                            <button class="btn zoom"></button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
     <script>
@@ -136,6 +233,13 @@
             slides[slideIndex - 1].style.display = 'block';
             dots[slideIndex - 1].className += ' active';
         }
+
+        var icon = document.querySelector('.icon');
+        var nav = document.querySelector('.nav');
+
+        icon.addEventListener('click', function () {
+            nav.classList.toggle('responsive');
+        })
     </script>
 </body>
 </html>
