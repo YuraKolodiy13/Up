@@ -55,8 +55,8 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#aboutUs">About</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li class="icon"><a href="javascript:void(0)">☰</a></li>
             </ul>
             <div class="search">
@@ -199,47 +199,91 @@
                 </div>
             </div>
         </div>
+        <div class="aboutUs container" id="aboutUs">
+            <div class="aboutUs__left">
+                <div class="aboutUs__title">
+                    <h2><span>About </span>Us</h2>
+                    <p>Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euism
+                        Nullam at scelerisque tellus mattis volutpat rhoncus, </p>
+                    <h6>Nullam at scelerisque tellus. Nulla feugiat iaculis ante, non tincidunt ligula scelerisque a. Vestibulum accumsan tincidunt odio vel finibus. Phasellus vestibulum lobortis ligula ut volutpat. Maecenas vitae nibh vel purus mollis semper. Nullam tempus feugiat mi id semper. Pellentesque ac posuere augue, vitae mollis enim. Etiam et ullamcorper dolor, a hendrerit quam.
+                        Donec pulvinar iaculis faucibus. Nunc feugiat semper fringilla.</h6>
+                </div>
+                <div class="aboutUs__skills skills">
+                    <div class="skills__photoshop skills__item">
+                        <p class="skills__name">PHOTOSHOP<span>79%</span></p>
+                        <div class="skills__progress">
+                            <div class="skills__line"></div>
+                        </div>
+                    </div>
+                    <div class="skills__html skills__item">
+                        <p class="skills__name">HTML/CSS <span>90%</span></p>
+                        <div class="skills__progress">
+                            <div class="skills__line"></div>
+                        </div>
+                    </div>
+                    <div class="skills__js skills__item">
+                        <p class="skills__name">JAVASCRIPT <span>69%</span></p>
+                        <div class="skills__progress">
+                            <div class="skills__line"></div>
+                        </div>
+                    </div>
+                    <div class="skills__wp skills__item">
+                        <p class="skills__name">WORDPRESS <span>92%</span></p>
+                        <div class="skills__progress">
+                            <div class="skills__line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutUs__right">
+                <img src="img/ipad.png" alt="ipad">
+            </div>
+        </div>
     </main>
 
+    <footer class="footer">
+        <div class="footer__title">
+            <h2>get in <span>touch</span></h2>
+            <p>Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis.
+                Nullam at scelerisque tellus mattis volutpat rhoncus, </p>
+        </div>
+        <div class="footer__top" id="contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10293.496481800163!2d23.951941679440583!3d49.83542753858751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suk!2sua!4v1519294252786" width="" height="635" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="footer__overlay"></div>
+            <div class="footer__wrapper">
+                <form action="" class="footer__form form">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="E-mail Address">
+                    <textarea name="textarea" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <input type="checkbox" id="like">
+                    <label for="like">I like your company</label>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+                <div class="footer__contacts">
+                    <p>69/A, Some Street Name
+                        Your City, code 01234
+                        Country Name</p>
+                    <p>+880 123 456 78 98
+                        +860 987 648 74 95</p>
+                    <p>company@mail.com
+                        sales@mail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__copyright">Copyright © Company. All Rights Reserved  2016</div>
+            <div class="footer__social">
+                <a href="" class="social social__fb"></a>
+                <a href="" class="social social__gl"></a>
+                <a href="" class="social social__tw"></a>
+                <a href="" class="social social__drigger"></a>
+            </div>
+        </div>
+    </footer>
+    <template></template>
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName('mySlides');
-            var dots = document.getElementsByClassName('dot');
-
-            if(n > slides.length){
-                slideIndex = 1;
-            }else if (n < 1){
-                slideIndex = slides.length;
-            }
-            for (i = 0; i < slides.length; i++){
-                slides[i].style.display = 'none';
-            }
-            for (i = 0; i < dots.length; i++){
-                dots[i].className = dots[i].className.replace('active', '');
-            }
-            slides[slideIndex - 1].style.display = 'block';
-            dots[slideIndex - 1].className += ' active';
-        }
-
-        var icon = document.querySelector('.icon');
-        var nav = document.querySelector('.nav');
-
-        icon.addEventListener('click', function () {
-            nav.classList.toggle('responsive');
-        })
-    </script>
+    <script src="aboutUs.js"></script>
+    <script src="nav.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>

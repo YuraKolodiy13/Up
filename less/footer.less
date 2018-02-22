@@ -1,0 +1,221 @@
+.footer{
+  padding-top: 50px;
+}
+.footer__title{
+  text-align: center;
+}
+.footer__title h2{
+  font-size: 35px;
+  text-transform: uppercase;
+}
+.footer__title span{
+  color: #009dda;
+}
+.footer__title p{
+  color: #999999;
+  font-size: 14px;
+  padding: 0 15%;
+}
+.footer__top{
+  position: relative;
+  background: url("../img/map.jpg") no-repeat;
+}
+.footer__wrapper{
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  padding: 80px 70px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__overlay{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .8);
+  transition: .5s;
+}
+.footer__top:hover .footer__overlay{
+  top: 100%;
+  transition: .5s;
+}
+
+.footer iframe{
+  width: 100%;
+  margin-bottom: -6px;
+}
+
+.footer__form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 65%;
+  letter-spacing: 0;
+}
+.footer__form textarea{
+  width: 100%;
+  background-color: transparent;
+  resize: none;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: Lato, sans-serif;
+}
+.footer__form input{
+  width: 47%;
+  padding: 15px 20px;
+  border: 1px solid #999897;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: #ffffff;
+  height: 50px;
+  box-sizing: border-box;
+}
+.footer__form label{
+  color: #b7b7b7;
+  position: relative;
+  padding: 15px 0 0 37px;
+  cursor: pointer;
+}
+.footer__form label::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 21px;
+  border: 1px solid #999897;
+}
+.footer__form input[type='checkbox']{
+  display: none;
+}
+.footer__form input[type='checkbox']:checked ~ label::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 19px;
+  height: 10px;
+  border-left: 2px solid red;
+  border-bottom: 2px solid red;
+  transform: rotate(-45deg) translateY(-100%);
+}
+.footer__form .btn{
+  background-color: #ffff00;
+  width: 120px;
+  padding: 13px 0;
+  text-align: center;
+  border: none;
+  color: #373737;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  height: 50px;
+  box-sizing: border-box;
+}
+::-webkit-input-placeholder {color:#b7b7b7; font-size: 16px; line-height: 24px}
+::-moz-placeholder          {color:#b7b7b7; font-size: 16px; line-height: 24px}/* Firefox 19+ */
+:-moz-placeholder           {color:#b7b7b7; font-size: 16px; line-height: 24px}/* Firefox 18- */
+:-ms-input-placeholder      {color:#b7b7b7; font-size: 16px; line-height: 24px}
+
+.footer__contacts{
+  width: 25%;
+}
+.footer__contacts p{
+  color: #f3f3f3;
+  margin: 0 0 25px;
+}
+
+.footer__bottom{
+  background-color: #1a1a1a;
+  color: #7a7a7a;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.footer__social .social{
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url("../img/sprite.png") no-repeat;
+  margin-left: 10px;
+}
+.footer__social .social:hover{
+  transform: scale(1.3);
+  transition: .3s;
+}
+.footer__social .social__fb{
+  background-position: 2px -35px;
+}
+.footer__social .social__gl{
+  background-position: -3px -64px;
+}
+.footer__social .social__tw{
+  background-position: -2px -137px;
+}
+.footer__social .social__drigger{
+  background-position: -3px -4px;
+}
+
+@media (min-width: 320px) and (max-width: 600px){
+  .footer__overlay{
+    display: none;
+  }
+  .footer__wrapper{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: none;
+    flex-wrap: wrap;
+    padding: 30px 10px 20px;
+    background-color: rgba(0, 0, 0, .8);
+  }
+  .footer__form,
+  .footer__contacts{
+    width: 100%;
+  }
+  .footer__form{
+    margin-bottom: 20px;
+  }
+  .footer__contacts{
+    text-align: center;
+  }
+  .footer__contacts p{
+    margin-bottom: 10px;
+  }
+  .footer__bottom{
+    font-size: 12px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
+  .footer iframe{
+    height: 500px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 890px){
+  .footer__wrapper{
+    left: 5%;
+    right: 5%;
+    padding: 10px;
+  }
+  .footer iframe{
+    height: 600px;
+  }
+  .footer__contacts {
+    width: 30%;
+  }
+}

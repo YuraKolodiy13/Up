@@ -1,0 +1,99 @@
+.aboutUs{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+}
+.aboutUs__left{
+  width: 50%;
+}
+.aboutUs__title h2{
+  font-size: 35px;
+  line-height: 42px;
+  color: #373737;
+  text-transform: uppercase;
+}
+.aboutUs__title p{
+  color: #999999;
+  font-size: 14px;
+}
+.aboutUs__title h6{
+  color: #373737;
+  font-size: 14px;
+  font-weight: normal;
+}
+.aboutUs__title span{
+  color: #009dda;
+}
+.aboutUs__right{
+  width: 35%;
+  text-align: right;
+  padding-top: 80px;
+}
+
+.skills__progress{
+  height: 3px;
+  border: 1px solid #dddddd;
+  padding: 2px;
+}
+.skills__line{
+  height: 3px;
+  background-color: #009dda;
+  width: 0;
+  transition: 1s;
+}
+
+
+.skills__name{
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 20px;
+  color: #444444;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.skills__item{
+  margin-bottom: 25px;
+}
+
+@media (min-width: 320px) and (max-width: 700px){
+  .aboutUs{
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  .aboutUs__left,
+  .aboutUs__right{
+    width: 100%;
+  }
+  .aboutUs__right{
+    text-align: center;
+    padding: 0;
+  }
+  .aboutUs__right img{
+    width: 310px;
+    height: auto;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 900px){
+  .aboutUs{
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  .aboutUs__left,
+  .aboutUs__right{
+    width: 45%;
+  }
+  .aboutUs__right img{
+    width: 310px;
+    height: auto;
+  }
+}
+@media (min-width: 901px) and (max-width: 1140px){
+  .aboutUs{
+    padding: 20px;
+  }
+  .aboutUs__right{
+    width: 40%;
+  }
+}
